@@ -24,7 +24,7 @@ public class HttpDeploy {
         if(port >= 1024 && port <= 49151){
             myPort = port;
         } else {
-            System.err.println("\u001B[33m[ "+new Date().toString().substring(11,19)+" WARN]: Port "+port.toString()+" is outside allowed range!\u001B[0m");
+            System.err.println("\u001B[33m["+new Date().toString().substring(11,19)+" WARN]: Port "+port.toString()+" is outside allowed range!\u001B[0m");
         }
         try {
             HttpDeploy.currentServer = HttpServer.create(new InetSocketAddress(myPort), 0);
